@@ -1,0 +1,52 @@
+@import "cards";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: linear-gradient(
+    to right,
+    rgba(105, 110, 255, 1),
+    rgba(248, 172, 255, 1)
+  );
+  color: white;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  padding: 2rem;
+}
+
+.pagetitle {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1.4rem;
+  text-shadow: 1px 1px 50px #080808;
+}
+
+.ididthis {
+  display: none;
+
+  @media (min-width: 85em) {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    top: 30%;
+    color: white;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: 10px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 100;
+    }
+  }
+}
